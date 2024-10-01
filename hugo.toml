@@ -252,7 +252,7 @@ url = "about/"
 [[menu.main]]
 identifier = "posts"
 name = "Projects"
-url = "Projects/"
+url = "projects/"
 [[menu.main]]
 identifier = "experiences"
 name = "Experiences"
