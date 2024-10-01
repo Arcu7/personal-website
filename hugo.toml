@@ -217,15 +217,15 @@ logoCursorDisabled = true
 
 [[params.social]]
 name = "email"
-url = "mailto:nobody@example.com"
+url = "rifaldo.salim@binus.ac.id"
 
 [[params.social]]
 name = "github"
-url = "https://github.com/"
+url = "https://github.com/zzenB"
 
 [[params.social]]
 name = "linkedin"
-url = "https://www.linkedin.com/"
+url = "https://www.linkedin.com/in/rifaldo-agustinus-salim-5302b932b"
 
 # [[params.social]]
 # name = "stackoverflow"
