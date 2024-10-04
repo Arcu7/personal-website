@@ -232,3 +232,103 @@
     margin-right: 8px;
   }
 }
+
+
+// skills
+// Variables
+$navy-dark: #1a1f2e;
+$navy-light: #2a2f3e;
+$text-light: #fff;
+$text-muted: #a0aec0;
+$spacing-base: 1rem;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: 768px) { @content; }
+  }
+}
+
+// Base styles
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-base * 2;
+}
+
+.page-header {
+  margin-bottom: $spacing-base * 3;
+  text-align: center;
+
+  .page-title {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-base;
+  }
+
+  .page-description {
+    font-size: 1.1rem;
+    color: #666;
+  }
+}
+
+// Skills section
+.skills-section {
+  // background-color: $navy-dark;
+  padding: $spacing-base * 3 $spacing-base * 2;
+  border-radius: 8px;
+  margin: $spacing-base * 2 0;
+}
+
+.skills-title {
+  color: $text-light;
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: $spacing-base * 2;
+}
+
+// Skills grid
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-base * 1.5;
+
+  @include respond-to('mobile') {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Skill cards
+.skill-card {
+  background-color: $navy-light;
+  padding: $spacing-base * 1.5;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-base;
+
+    .skill-icon {
+      width: $spacing-base * 2;
+      height: $spacing-base * 2;
+      margin-right: $spacing-base;
+    }
+
+    .skill-name {
+      color: $text-light;
+      font-size: 1.25rem;
+      margin: 0;
+    }
+  }
+
+  .skill-description {
+    color: $text-muted;
+    margin: 0;
+    line-height: 1.5;
+  }
+}

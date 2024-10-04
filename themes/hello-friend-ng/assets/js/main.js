@@ -55,6 +55,7 @@ if (themeToggle) {
 } else {
   localStorage.removeItem("theme");
 }
+
 // Fade in effect
 function triggerFadeIn() {
   setTimeout(function() {
