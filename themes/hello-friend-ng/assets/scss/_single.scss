@@ -1,9 +1,10 @@
 .post {
-  width: 100%;
+  // width: 100%;
   max-width: 800px;
   text-align: left;
   padding: 20px;
   margin: 20px auto;
+  position: relative;
   @media #{$media-size-tablet} {
     max-width: 600px;
   }
@@ -250,47 +251,60 @@ $spacing-base: 1rem;
 }
 
 // Base styles
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: $spacing-base * 2;
-}
+////wtf is this
+// .content-wrapper {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: $spacing-base * 2;
+// }
 
-.page-header {
-  margin-bottom: $spacing-base * 3;
-  text-align: center;
-
-  .page-title {
-    font-size: 2.5rem;
-    margin-bottom: $spacing-base;
-  }
-
-  .page-description {
-    font-size: 1.1rem;
-    color: #666;
-  }
-}
+//.page-header {
+//  margin-bottom: $spacing-base * 3;
+//  text-align: center;
+//
+//  .page-title {
+//    font-size: 2.5rem;
+//    margin-bottom: $spacing-base;
+//  }
+//
+//  .page-description {
+//    font-size: 1.1rem;
+//    color: #666;
+//  }
+//}
 
 // Skills section
 .skills-section {
   // background-color: $navy-dark;
-  padding: $spacing-base * 3 $spacing-base * 2;
-  border-radius: 8px;
-  margin: $spacing-base * 2 0;
+  width: 120%;
+  position: relative;
+  // padding: 0px $spacing-base * 3 $spacing-base * 2;
+  // border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  right: 10%;
 }
 
 .skills-title {
-  color: $text-light;
-  text-align: left;
+  // color: $text-light;
+  text-align: center;
   font-size: 2rem;
-  margin-bottom: $spacing-base * 2;
+  display: block;
+  margin: $spacing-base * 2 0;
+  // margin-bottom: $spacing-base * 2;
 }
 
 // Skills grid
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: $spacing-base * 1.5;
+  // width: 100%;
+  padding: 0 $spacing-base 20px;
+  box-sizing: border-box;
 
   @include respond-to('mobile') {
     grid-template-columns: 1fr;
@@ -303,6 +317,9 @@ $spacing-base: 1rem;
   padding: $spacing-base * 1.5;
   border-radius: 8px;
   transition: transform 0.2s ease;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 
   &:hover {
     transform: translateY(-5px);
