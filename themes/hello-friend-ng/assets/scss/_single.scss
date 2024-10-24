@@ -27,6 +27,17 @@
     }
   }
 
+  &-centered-title {
+    font-size: 2.625rem;
+    margin: 0 0 20px;
+    display: block;
+    text-align: center;
+    
+    @media #{$media-size-phone} {
+      font-size: 2rem;
+    }
+  }
+
   &-tags {
     display: block;
     margin-bottom: 20px;
@@ -353,4 +364,121 @@ $spacing-base: 1rem;
     margin: 0;
     line-height: 1.5;
   }
+}
+
+//Projects section
+.projects-section {
+  width: 140%;
+  right: 20%;
+  position: relative;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.projects-grid {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-base * 2;
+  width: 100%;
+  box-sizing: border-box;
+  
+  @include respond-to('mobile') {
+      grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background-color: $navy-light;
+  padding: $spacing-base * 2;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+      transform: translateY(-5px);
+  }
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $spacing-base;
+  
+  .project-icon {
+    width: $spacing-base * 3;
+    height: $spacing-base * 3;
+    margin-right: $spacing-base;
+  }
+}
+
+.project-title-section {
+  flex: 1;
+}
+
+.project-name {
+  color: $text-light;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: $spacing-base * 0.5;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  color: $text-muted;
+  font-size: 0.9rem;
+  margin-bottom: $spacing-base;
+}
+
+.project-description {
+  color: $text-muted;
+  margin: 0;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-base;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-base * 0.5;
+  // margin-top: $spacing-base;
+}
+
+.project-tag {
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  color: $text-muted;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+}
+
+.github-stats {
+  // margin-top: $spacing-base;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.github-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.github-stars {
+  height: 18px;  // Increase the height to make it more visible
+  width: auto;
+  transform: scale(1.2);  // Make the badge slightly larger
+  white-space: nowrap;
+  min-width: 90px;
 }

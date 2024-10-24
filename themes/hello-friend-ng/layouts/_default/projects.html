@@ -1,0 +1,53 @@
+{{ define "main" }}
+    <main class="post">
+        <div class="post-info">
+            {{ if .IsTranslated }}
+                {{ i18n "postAvailable" }}
+                {{ range .Translations }}
+                    <a href="{{ .Permalink }}"><span class="flag fi fi-{{ index $.Site.Data.langFlags (.Lang) }}"></span></a>
+                {{ end}}
+            {{ end }}
+        </div>
+        <article>
+            <h2 class="post-centered-title">Projects</h2>
+            
+            {{ if .Params.projects }}
+                <section class="projects-section">
+                    <div class="projects-grid">
+                    {{ range .Params.projects }}
+                        <div class="project-card">
+                            <div class="project-header">
+                                {{ with .icon }}
+                                    <img src="{{ . }}" alt="{{ $.Title }} icon" class="project-icon">
+                                {{ end }}
+                                <div class="project-title-section">
+                                    <h3 class="project-name">{{ .name }}</h3>
+                                    <div class="project-meta">
+                                        <span class="project-role">{{ .role }}</span>
+                                        <span class="project-duration">{{ .duration }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="project-description">{{ .description }}</p>
+                            <div class="project-footer">
+                              <div class="project-tags">
+                                  {{ range .tags }}
+                                      <span class="project-tag">{{ . }}</span>
+                                  {{ end }}
+                              </div>
+                              {{ if .github }}
+                                  <div class="github-stats">
+                                      <a href="https:github.com/{{ .github }}">
+                                        <img src="https://img.shields.io/badge/GitHub-Link-lightgrey?style=flat-square&logo=github" alt="GitHub stars" class="github-stars">
+                                      </a>
+                                  </div>
+                              {{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                    </div>
+                </section>
+            {{ end }}
+        </article>
+    </main>
+{{ end }}
