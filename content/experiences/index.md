@@ -1,5 +1,5 @@
 +++
-title = 'Experiences'
+title = 'Experiences & Skills'
 date = 2024-10-04T23:23:08+07:00
 layout = "skills"
 [[params.skills]]
@@ -8,7 +8,7 @@ icon = "/images/terraform.svg"
 description = "Capable of deploying and managing IaC for multiple providers using terraform. Experienced with writing and debugging HCL code."
 
 [[params.skills]]
-name = "Go Development"
+name = "Golang"
 icon = "/images/golang.svg"
 description = "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
 
@@ -31,6 +31,21 @@ description = "Main development operating system (Debian 12). Capable of writing
 name = "Git"
 icon = "/images/git.svg"
 description = "Experienced with git-based development primarily through GitHub."
+
+[[params.skills]]
+name = "C/C++"
+icon = "/images/c.svg"
+description = "Basic C and C++ knowledge. Have experience in writing simple programs that implement fundamental algorithms (sorting, searching, etc.)"
+
+[[params.skills]]
+name = "Python"
+icon = "/images/python.svg"
+description = "Moderately knowldgeable in Python development, specifically in data analysis and machine learning. Have experience with various related libaries such as Pandas, Numpy, TensorFlow, etc."
+
+[[params.skills]]
+name = "HTML/CSS/JS"
+icon = "/images/html.svg"
+description = "Basic knowledge in web development. Have experience in creating simple websites using only HTML, CSS, and JS and also SSG such as Hugo."
 +++
 ## **Education** 🎓
 
@@ -40,51 +55,46 @@ description = "Experienced with git-based development primarily through GitHub."
 
 **Bachelor of Computer Science** | 2022 - 2026
 
+- Streaming: Network Technology
 - GPA (current): 3.40
-- Relevant Coursework:
-  - [Course 1]
-  - [Course 2]
-  - [Course 3]
 - Projects:
   - **Document Analyzer**: A document analyzer/summarizer utilizing Retrieval-augmented generation, coded using Python and Langchain as the backend with a PyQt GUI
-  - **Local Chat App**: CLI chat app implementing TCP/IP protocol coded entirely using golang with no external libraries
+  - **Local Chat App**: CLI chat app implementing TCP/IP protocol coded entirely using Go with no external libraries
 
 ### **Narada School**
+
+{{< image src="/images/narada.png" alt="Narada School" style="width: 35%; border-radius: 8px; float: right; background-color: white; padding: 10px" >}}
 
 **High School Diploma** | Graduated 2021
 
 - Organizations:
-  - [Organization 1]
+  - OSIS (Head of Computer Division)
+  - Physics Research Club (Researcher)
 - Competitions:
-  - [Competition 1]
-- Relevant Activities:
-  - [Activity 1]
-  - [Activity 2]
+  - LPB DKI Jakarta 2018 ("Sonar GPS", Special Award - Physics)
+  - LPB DKI Jakarta 2019 ("ALT-TAS (Application of Line Following Robot in Truck Toll Alarm System)", Third Place - Physics)
+  - LPB DKI Jakarta 2020 ("Sonar Pager", First Place - Physics)
+  - LPB Nasional 2018, 2019, 2020
+- Experiences/Activities:
+  - Conducted researches in physics and participated in regional and national physics competitions
+  - Led the student council IT division, managing the school's IT infrastructure, website, and other IT-related matters
+  - Organized the school's yearly event (Ultimate Cup) as the head of the IT division, managing the event's scoial media, streaming, technical procurement/support, and others
+  - Involved in multiple school events such as workshops, seminars, etc as a technical support (e.g. sound system, streaming, etc.)
 
-## Professional Experience 💼
-
-### [Company/Organization Name]
-
-**[Position Title]** | [Start Date] - [End Date]
-
-- Developed [technology/project] using [tools/languages]
-- Collaborated with [team size] team members to [achievement]
-- Improved [metric/process] by [quantifiable result]
-
-### [Company/Organization Name]
-
-**[Position Title]** | [Start Date] - [End Date]
-
-- [Responsibility/Achievement 1]
-- [Responsibility/Achievement 2]
-- [Responsibility/Achievement 3]
-
-## Leadership & Activities 👥
-
-### [Organization Name]
-
-**[Role]** | [Duration]
-
-- Led [initiative/project]
-- Organized [event/activity]
-- Achieved [result/impact]
+<!-- ## Professional Experience 💼 -->
+<!---->
+<!-- ### [Company/Organization Name] -->
+<!---->
+<!-- **[Position Title]** | [Start Date] - [End Date] -->
+<!---->
+<!-- - Developed [technology/project] using [tools/languages] -->
+<!-- - Collaborated with [team size] team members to [achievement] -->
+<!-- - Improved [metric/process] by [quantifiable result] -->
+<!---->
+<!-- ### [Company/Organization Name] -->
+<!---->
+<!-- **[Position Title]** | [Start Date] - [End Date] -->
+<!---->
+<!-- - [Responsibility/Achievement 1] -->
+<!-- - [Responsibility/Achievement 2] -->
+<!-- - [Responsibility/Achievement 3] -->
