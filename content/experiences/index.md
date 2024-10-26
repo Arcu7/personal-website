@@ -59,7 +59,7 @@ description = "Basic knowledge in web development. Have experience in creating s
 - GPA (current): 3.40
 - Projects:
   - **Document Analyzer**: A document analyzer/summarizer utilizing Retrieval-augmented generation, coded using Python and Langchain as the backend with a PyQt GUI
-  - **Local Chat App**: CLI chat app implementing TCP/IP protocol coded entirely using Go with no external libraries
+  - **Local Chat App**: CLI chat app implementing TCP/IP protocol coded entirely using Go with Fyne as the GUI
 
 ### **Narada School**
 
