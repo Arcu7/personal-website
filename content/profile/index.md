@@ -1,5 +1,5 @@
 +++
-title = 'Experiences & Skills'
+title = "Experiences & Skills"
 date = 2024-10-04T23:23:08+07:00
 layout = "skills"
 [[params.skills]]
