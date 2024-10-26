@@ -10,7 +10,7 @@ role = "Author"
 duration = "2024 - Present"
 description = "This website was built using Hugo static site generator. It is hosted and deployed on Cloudflare Pages."
 tags = ["Hugo", "Cloudflare Pages"]
-github = "Arcu7/personal-website-test"
+github = "Arcu7/personal-website"
 
 [[params.projects]]
 name = "Document Analayzer"
