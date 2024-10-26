@@ -46,6 +46,16 @@ description = "Moderately knowldgeable in Python development, specifically in da
 name = "HTML/CSS/JS"
 icon = "/images/html.svg"
 description = "Basic knowledge in web development. Have experience in creating simple websites using only HTML, CSS, and JS and also SSG such as Hugo."
+
+[[params.skills]]
+name = "SQL (MySQL)"
+icon = "/images/mysql.svg"
+description = "Basic knowledge of SQL and DBMS management, specifically with MySQL. Have experience in creating simple databases, tables, and queries using XAMPP."
+
+[[params.skills]]
+name = "Vim"
+icon = "/images/vim.svg"
+description = "Experienced in using Vim motions and NeoVim as the main text editor. Capable of writing and editing code efficiently using Vim."
 +++
 ## **Education** 🎓
 
