@@ -261,36 +261,10 @@ $spacing-base: 1rem;
   }
 }
 
-// Base styles
-////wtf is this
-// .content-wrapper {
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   padding: $spacing-base * 2;
-// }
-
-//.page-header {
-//  margin-bottom: $spacing-base * 3;
-//  text-align: center;
-//
-//  .page-title {
-//    font-size: 2.5rem;
-//    margin-bottom: $spacing-base;
-//  }
-//
-//  .page-description {
-//    font-size: 1.1rem;
-//    color: #666;
-//  }
-//}
-
 // Skills section
 .skills-section {
-  // background-color: $navy-dark;
   width: 140%;
   position: relative;
-  // padding: 0px $spacing-base * 3 $spacing-base * 2;
-  // border-radius: 8px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -305,20 +279,17 @@ $spacing-base: 1rem;
 }
 
 .skills-title {
-  // color: $text-light;
   text-align: center;
   font-size: 2rem;
   display: block;
   margin: $spacing-base * 2 0;
-  // margin-bottom: $spacing-base * 2;
 }
 
 // Skills grid
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: $spacing-base * 1.5;
-  // width: 100%;
   padding: 0 $spacing-base 20px;
   box-sizing: border-box;
 
@@ -334,8 +305,21 @@ $spacing-base: 1rem;
   border-radius: 8px;
   transition: transform 0.2s ease;
   height: 100%;
-  width: 100%;
   box-sizing: border-box;
+  grid-column: span 2;
+
+  // some grid magic, do not attempt
+  &:last-child:nth-child(3n - 1) {
+    grid-column-end: -2;
+  }
+  
+  &:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-end: 4;
+  }
+
+  &:last-child:nth-child(3n - 2) {
+    grid-column-end: 5;
+  }
 
   &:hover {
     transform: translateY(-5px);
@@ -379,7 +363,6 @@ $spacing-base: 1rem;
 
 .projects-grid {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-columns: repeat(2, 1fr);
   gap: $spacing-base * 2;
   width: 100%;
@@ -453,7 +436,6 @@ $spacing-base: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: $spacing-base * 0.5;
-  // margin-top: $spacing-base;
 }
 
 .project-tag {
@@ -465,7 +447,6 @@ $spacing-base: 1rem;
 }
 
 .github-stats {
-  // margin-top: $spacing-base;
   display: flex;
   justify-content: flex-end;
 }
@@ -476,9 +457,9 @@ $spacing-base: 1rem;
 }
 
 .github-stars {
-  height: 18px;  // Increase the height to make it more visible
+  height: 18px;
   width: auto;
-  transform: scale(1.2);  // Make the badge slightly larger
+  transform: scale(1.2);
   white-space: nowrap;
   min-width: 90px;
 }
