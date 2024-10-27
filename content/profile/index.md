@@ -69,7 +69,7 @@ description = "Experienced in using Vim motions and NeoVim as the main text edit
 - GPA (current): 3.40
 - Projects:
   - **Document Analyzer**: A document analyzer/summarizer utilizing Retrieval-augmented generation, coded using Python and Langchain as the backend with a PyQt GUI
-  - **Local Chat App**: CLI chat app implementing TCP/IP protocol coded entirely using Go with Fyne as the GUI
+  - **Local Chat App**: CLI chat app implementing TCP/IP protocol with WebSocket coded entirely using Go with a Fyne GUI in development
 
 ### **Narada School**
 
