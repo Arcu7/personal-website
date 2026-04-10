@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="container centered-content not-found-content">
+  <p class="not-found-code">404</p>
+  <h1 class="not-found-title">Page not found</h1>
+  <p class="not-found-text">The page you are looking for may have moved, been deleted, or never existed.</p>
+  <a class="not-found-link" href="{{ "/" | relURL }}">Back to home</a>
+</section>
+
+<style>
+.not-found-content {
+  min-height: calc(100vh - 80px);
+  gap: 0.75rem;
+}
+
+.not-found-code {
+  margin: 0;
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.not-found-title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.not-found-text {
+  max-width: 40ch;
+  margin: 0.5rem 0 1.5rem;
+  opacity: 0.85;
+}
+
+.not-found-link {
+  display: inline-block;
+  border: 2px solid var(--border-color);
+  padding: 0.65rem 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.not-found-link:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .not-found-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+</style>
+{{ end }}
