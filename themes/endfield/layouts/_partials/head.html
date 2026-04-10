@@ -3,17 +3,33 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ $bgLightWebp := resources.Get "images/endfield-topo-light.webp" }}
 {{ $bgDarkWebp := resources.Get "images/endfield-topo-dark.webp" }}
-{{ $bgLight := $bgLightWebp }}
-{{ $bgDark := $bgDarkWebp }}
+{{ $bgLightPng := resources.Get "images/endfield-topo-light.png" }}
+{{ $bgDarkPng := resources.Get "images/endfield-topo-dark.png" }}
+{{ $bgLight := $bgLightPng }}
+{{ $bgDark := $bgDarkPng }}
+{{ if $bgLightWebp }}{{ $bgLight = $bgLightWebp }}{{ end }}
+{{ if $bgDarkWebp }}{{ $bgDark = $bgDarkWebp }}{{ end }}
 {{ if and $bgLight $bgDark }}
 <style>
   :root {
     --bg-image-light: url('{{ $bgLight.RelPermalink }}');
     --bg-image-dark: url('{{ $bgDark.RelPermalink }}');
+{{ if and $bgLightWebp $bgLightPng }}
+    --bg-image-light: image-set(
+      url('{{ $bgLightWebp.RelPermalink }}') type('image/webp'),
+      url('{{ $bgLightPng.RelPermalink }}') type('image/png')
+    );
+{{ end }}
+{{ if and $bgDarkWebp $bgDarkPng }}
+    --bg-image-dark: image-set(
+      url('{{ $bgDarkWebp.RelPermalink }}') type('image/webp'),
+      url('{{ $bgDarkPng.RelPermalink }}') type('image/png')
+    );
+{{ end }}
   }
 </style>
-<link rel="preload" href="{{ $bgLight.RelPermalink }}" as="image" fetchpriority="high">
-<link rel="preload" href="{{ $bgDark.RelPermalink }}" as="image">
+<link rel="preload" href="{{ $bgLight.RelPermalink }}" as="image" media="(prefers-color-scheme: light)" fetchpriority="high">
+<link rel="preload" href="{{ $bgDark.RelPermalink }}" as="image" media="(prefers-color-scheme: dark)">
 {{ end }}
 <script>
   (function () {
