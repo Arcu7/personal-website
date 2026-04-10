@@ -1,0 +1,155 @@
+.site-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--nav-bg);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+  opacity: 0.85;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  gap: 1rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.terminal-brand {
+  font-family:  "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-color);
+}
+
+.terminal-cursor {
+  width: 0.65rem;
+  height: 1.45rem;
+  background-color: #d45a7e;
+  animation: terminal-cursor-blink 1.1s steps(1, end) infinite;
+}
+
+@keyframes terminal-cursor-blink {
+  0%, 45% {
+    opacity: 1;
+  }
+  46%, 100% {
+    opacity: 0;
+  }
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-direction: row;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.resume-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-external {
+  width: 16px;
+  height: 16px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+  margin-left: 1.5rem;
+}
+
+.theme-toggle:hover {
+  opacity: 0.7;
+}
+
+.theme-toggle .sun-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle .moon-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .terminal-brand {
+    font-size: 1.05rem;
+  }
+
+  .terminal-cursor {
+    width: 0.5rem;
+    height: 1rem;
+  }
+
+  .nav-menu {
+    gap: 0.75rem;
+    font-size: 0.72rem;
+  }
+
+  .header-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,162 @@
+{{ define "main" }}
+<div class="container centered-content page-content">
+  <h1 class="page-title">{{ .Title }}</h1>
+  
+  <div class="page-body">
+    {{ .Content }}
+  </div>
+
+  {{ if eq .Type "about" }}
+    <section class="education-section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-list">
+        {{ range .Params.education }}
+          <div class="education-item">
+            <div class="edu-header">
+              <span class="edu-institution">{{ .institution }}</span>
+              {{ with .period }}
+                <span class="edu-separator" aria-hidden="true">|</span>
+                <span class="edu-period">{{ . }}</span>
+              {{ end }}
+            </div>
+            <div class="edu-degree">{{ .degree }}</div>
+            <div class="edu-score">{{ .score }}</div>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <h2 class="section-title">Skills</h2>
+      <div class="card-grid grid-3">
+        {{ range .Params.skills }}
+          <div class="card">
+            {{ if .icon }}
+              <div class="skill-icon">
+                {{ if hasPrefix .icon "<" }}
+                  {{ .icon | safeHTML }}
+                {{ else }}
+                  <img src="{{ .icon | relURL }}" alt="{{ .title }} icon" loading="lazy">
+                {{ end }}
+              </div>
+            {{ end }}
+            <h3>{{ .title }}</h3>
+            <p>{{ .description | markdownify}}</p>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if eq .Type "projects" }}
+    <section class="projects-section">
+      <div class="card-grid grid-2">
+        {{ range .Params.projects }}
+          <div class="card project-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            <div class="card-footer">
+              <div class="keyword-list">
+                {{ range .keywords }}
+                  <span class="keyword">{{ . }}</span>
+                {{ end }}
+              </div>
+              {{ if .github }}
+                <a href="{{ .github }}" target="_blank" class="github-link" aria-label="View on GitHub">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span class="github-link-text">GitHub link</span>
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</div>
+
+<style>
+.page-content {
+  justify-content: flex-start;
+  padding-top: 2.5rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin: 1 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.page-body {
+  max-width: 800px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin: 2rem 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+.education-list {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+.education-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.edu-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-separator {
+  opacity: 0.8;
+}
+
+.edu-degree {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.edu-score {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon svg,
+.skill-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.skill-icon svg {
+  fill: var(--text-color);
+}
+</style>
+{{ end }}

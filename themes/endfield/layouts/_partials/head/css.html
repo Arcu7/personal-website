@@ -1,0 +1,18 @@
+{{- $opts := dict
+  "minify" (cond hugo.IsDevelopment false true)
+  "sourceMap" (cond hugo.IsDevelopment "linked" "none")
+-}}
+{{- $styles := slice
+  (resources.Get "css/main.css")
+  (resources.Get "css/components/header.css")
+  (resources.Get "css/components/footer.css")
+-}}
+{{- with $styles | resources.Concat "css/site.css" | css.Build $opts }}
+    {{- if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+{{- end }}

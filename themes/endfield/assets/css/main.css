@@ -1,0 +1,182 @@
+:root {
+  --bg-image: url('../images/endfield-topo-light.png');
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: #000000;
+  --footer-border-color: #222222;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --accent-color: #333333;
+}
+
+[data-theme="dark"] {
+  --bg-image: url('../images/endfield-topo-dark.png');
+  --bg-color: #0f0f10;
+  --text-color: #f2f2f2;
+  --border-color: #5a5a5a;
+  --footer-border-color: #4d4d4d;
+  --card-bg: #1a1a1a;
+  --nav-bg: rgba(26, 26, 26, 0.85);
+  --accent-color: #c0c0c0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.bio-text a,
+.page-body a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 80px); /* header height approx */
+  padding: 4rem 0;
+}
+
+/* Card Styles */
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 992px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card svg, .card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  fill: var(--text-color);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.keyword {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card-footer {
+  margin-top: auto;
+}
+
+.github-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.github-link svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0;
+}
+
+.github-link-text {
+  font-size: 0.65rem;
+  line-height: 1;
+  opacity: 0.8;
+  white-space: nowrap;
+}
