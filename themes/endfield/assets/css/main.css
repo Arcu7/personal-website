@@ -1,6 +1,6 @@
 :root {
-  --bg-image-light: url('../images/endfield-topo-light.webp');
-  --bg-image-dark: url('../images/endfield-topo-dark.webp');
+  --bg-image-light: url('../images/endfield-topo-light.png');
+  --bg-image-dark: url('../images/endfield-topo-dark.png');
   --bg-image: var(--bg-image-light);
   --bg-color: #ffffff;
   --text-color: #000000;
