@@ -1,6 +1,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{ $bgLightWebp := resources.Get "images/endfield-topo-light.webp" }}
+{{ $bgDarkWebp := resources.Get "images/endfield-topo-dark.webp" }}
+{{ $bgLight := $bgLightWebp }}
+{{ $bgDark := $bgDarkWebp }}
+{{ if and $bgLight $bgDark }}
+<style>
+  :root {
+    --bg-image-light: url('{{ $bgLight.RelPermalink }}');
+    --bg-image-dark: url('{{ $bgDark.RelPermalink }}');
+  }
+</style>
+<link rel="preload" href="{{ $bgLight.RelPermalink }}" as="image" fetchpriority="high">
+<link rel="preload" href="{{ $bgDark.RelPermalink }}" as="image">
+{{ end }}
 <script>
   (function () {
     const root = document.documentElement;

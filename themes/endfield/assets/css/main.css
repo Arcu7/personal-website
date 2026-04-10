@@ -1,5 +1,7 @@
 :root {
-  --bg-image: url('../images/endfield-topo-light.png');
+  --bg-image-light: url('../images/endfield-topo-light.webp');
+  --bg-image-dark: url('../images/endfield-topo-dark.webp');
+  --bg-image: var(--bg-image-light);
   --bg-color: #ffffff;
   --text-color: #000000;
   --border-color: #000000;
@@ -10,7 +12,7 @@
 }
 
 [data-theme="dark"] {
-  --bg-image: url('../images/endfield-topo-dark.png');
+  --bg-image: var(--bg-image-dark);
   --bg-color: #0f0f10;
   --text-color: #f2f2f2;
   --border-color: #5a5a5a;
