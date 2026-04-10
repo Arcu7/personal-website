@@ -1,5 +1,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<script>
+  (function () {
+    const root = document.documentElement;
+    root.classList.add('is-entering');
+
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+      } else if (savedTheme === 'light') {
+        root.removeAttribute('data-theme');
+      }
+    } catch (error) {
+      root.removeAttribute('data-theme');
+    }
+  })();
+</script>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
