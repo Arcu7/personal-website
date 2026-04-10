@@ -45,12 +45,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
-
 #page-transition-root {
   opacity: 1;
   transform: translateY(0);
