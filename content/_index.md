@@ -1,7 +1,7 @@
 ---
 title: "Home"
 name: "Rifaldo Agustinus Salim"
-profile_image: "/images/profile.jpg"
+profile_image: "/images/profile.png"
 social_links:
   - name: "GitHub"
     url: "https://github.com/Arcu7"
