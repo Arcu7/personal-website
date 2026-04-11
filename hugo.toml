@@ -3,6 +3,12 @@ locale = 'en-us'
 title = 'Rifaldo Agustinus Salim - Personal Website'
 theme = 'endfield'
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+
 [menus]
 [[menus.main]]
 name = 'Home'

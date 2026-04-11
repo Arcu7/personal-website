@@ -13,4 +13,4 @@ social_links:
     url: "mailto:rifaldoagustus@gmail.com"
 ---
 
-Welcome to my personal website! I am Rifaldo, a passionate software engineer with a keen interest in backend software development using Go. Feel free to take a look around and explore [about me](/about), [my projects](/projects), and [my resume](/resume).
+Welcome to my personal website! I am Rifaldo, a passionate software engineer with a keen interest in backend software development using Go. Feel free to take a look around and explore [about me](/about), [my projects](/projects), and <a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">my resume</a>.
