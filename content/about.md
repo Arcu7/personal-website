@@ -34,4 +34,4 @@ skills:
 ---
 
 My name is **Rifaldo** and I am a Binus University fresh graduate that is passionate in **Backend Software Engineering** with experience in building scalable, robust, and efficient systems using **Go**.
-As a backend engineer, I focus on the architecture and logic that powers modern applications. I enjoy diving into the details of system performance, API design, and data integrity.
+As a backend engineer, I enjoy learning new technologies an diving into the details of backend system performance, API design, and data integrity.
