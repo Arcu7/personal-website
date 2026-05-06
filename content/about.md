@@ -20,7 +20,7 @@ skills:
     description: "Skilled with git-based development using lazygit and the Git CLI with experience in both GitHub and GitLab"
     icon: "icons/git.svg"
   - title: "Linux"
-    description: "Main development operating system (Fedora 43) with plenty of experience using the CLI. Capable of writing bash/shell scripts"
+    description: "Main development operating system (Fedora 44) with plenty of experience using the CLI. Capable of writing bash/shell scripts"
     icon: "icons/linux.svg"
   - title: "Vim"
     description: "Adept in using Vim motions and Neovim as the main text editor allowing efficient writing and editing of code"
